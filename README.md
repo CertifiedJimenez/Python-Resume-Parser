@@ -58,14 +58,37 @@ sample.get_role_history()
 #     "end_date": "None",
 #     "Worked Period": "None"
 #   },
+#]
 ```
 
 
-get_date(self, text="") -> list: This method will get the date of a string and return the lowest and highest as a datetime object.
+`get_date(self, text="")` -> list: This method will get the date of a string and return the lowest and highest and the priod between as a datetime object .
+```python
+sample.get_date() # [May 2021, May 2022, 365]
+```
 
-get_extract_skills(self, text = None) -> list: This method will get the skills within the extracted resume. It will load a JSON file of skills and will match the skills in the input text. It will return a list of matched skills.
 
-_get_between_text(self, text, list) -> list: This method gets the text in between the resume description. It will use the input list to find the starting and ending words of the job descriptions, then it will extract the text between those words.
+`get_extract_skills(self, text = None) -> list`: This method will get the skills within the extracted resume. It will load a JSON file of skills and will match the skills in the input text. It will return a list of matched skills.
+```python
+sample.get_extract_skills() # ["Django", "Java", "React"] 
+```
+
+`_get_between_text(self, text, list) -> list`: This private method gets the text in between the resume description. It will use the input list to find the starting and ending words of the job descriptions, then it will extract the text between those words.
+
+```python
+sample._get_between_text() # ["Django", "Java", "React"] 
+# Output
+# "feb 2022 - present • provided crucial support to a junior developer struggling with a complex project, offering guidance and troubleshooting assistance to help them overcome technical obstacles and achieve their objectives
+# • directed the successful development and launch of an exciting project, overseeing the entire development lifecycle from initial design to user feedback analysis,
+# • led a team-wide effort to improve development processes, identifying areas for improvement and implementing new tools and methodologies to streamline workflows and improve project outcomes,
+# • designed and developed a data dashboard panel in django that displayed key information to users, resulting in a 20% increase in user engagement,
+# • developed a highly efficient backend using the django python framework, leveraging crud operations and advanced techniques to optimize performance and streamline development processes,
+# • built a user settings page and email authentication system that improved user experience and boosted sign-ups by 25%,
+# • refactored code with an emphasis on reusability, object orientation and reducing load on the database server, leading to a 15% improvement in website speed and performance,
+# • successfully collaborated with a team of developers and designers to build and deploy multiple web applications on the django framework, resulting in a 40% increase in user acquisition and retention,
+# • demonstrated expertise in django frameworks, using rest api, postgressql databases, as well as html, css, and javascript to develop visually appealing and user-friendly web pages
+# weprepfba remote zoho -"
+```
 
 Note:
 
