@@ -9,12 +9,15 @@ The ResumeParser class is a Python class that can parse a resume and extract inf
 ## Class methods: 
 `__init__(self, filename=None, text='', initialiseModel = True) -> None`: Initializes the class object with the input filename or text. It will raise an error if both inputs are missing.
 
+```Python
+sample = ResumeParser('resume.pdf')
+```
+
 ### get_role_titles:
 
 `get_role_titles(self) -> list`: This method gets the role titles that the resume contains. It will load a JSON file of job titles and will match the job titles in the input text. It will return a list of matched job titles.
 
 ```Python
-sample = ResumeParser('resume.pdf')
 sample.get_role_titles() # [Software Engineer, Project Manager]
 ```
 ### get_role_history:
