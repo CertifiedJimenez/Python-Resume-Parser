@@ -10,11 +10,15 @@ The ResumeParser class is a Python class that can parse a resume and extract inf
 `__init__(self, filename=None, text='', initialiseModel = True) -> None`: Initializes the class object with the input filename or text. It will raise an error if both inputs are missing.
 
 
+`get_role_titles(self) -> list`: This method gets the role titles that the resume contains. It will load a JSON file of job titles and will match the job titles in the input text. It will return a list of matched job titles.
+
 ```Python
 sample = ResumeParser('resume.pdf')
 sample.get_role_titles() # [Software Engineer, Project Manager]
 ```
-`get_role_titles(self) -> list`: This method gets the role titles that the resume contains. It will load a JSON file of job titles and will match the job titles in the input text. It will return a list of matched job titles.
+
+`get_role_history(self, skills = False) -> list`: This method will get the job history and the job descriptions in the resume. It will use the get_role_titles() method to find the job titles and then extract the job descriptions in between those job titles. It will return a list of dictionaries containing the `title`, `description`, `skills`, `start_date`, `end_date`, and `worked_period`.
+
 
 ```Python
 sample = ResumeParser('resume.pdf')
@@ -55,7 +59,7 @@ sample.get_role_history()
 #     "Worked Period": "None"
 #   },
 ```
-get_role_history(self, skills = False) -> list: This method will get the job history and the job descriptions in the resume. It will use the get_role_titles() method to find the job titles and then extract the job descriptions in between those job titles. It will return a list of dictionaries containing the title, description, skills, start_date, end_date, and worked_period.
+
 
 get_date(self, text="") -> list: This method will get the date of a string and return the lowest and highest as a datetime object.
 
