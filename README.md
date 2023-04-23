@@ -13,12 +13,21 @@ The ResumeParser class is a Python class that can parse a resume and extract inf
 
 Class methods:
 
+
 ### Like by Tags
 
+## Methods: 
 ```python
-# Like posts based on hashtags
-session.like_by_tags(['natgeo', 'world'], amount=10)
+__init__(self, filename=None, text='', initialiseModel = True) -> None
 ```
+Initializes the class object with the input filename or text of the resmue. 
+It will raise an error if both inputs are missing.
+
+```python
+get_role_titles(self) -> list
+```
+get_role_titles(self) -> list: This method gets the role titles that the resume contains. It will load a JSON file of job titles and will match the job titles in the input text. It will return a list of matched job titles.
+
 
 #### Parameters:
  `tags`: The tags that will be searched for and posts will be liked from
@@ -38,6 +47,7 @@ session.like_by_tags(['natgeo', 'world'], amount=10)
   `randomize`: Determines whether the first `amount` of posts should be liked or a random selection.
 
   `media`: Determines which media should be liked, Photo or Video (default is `None` which is all)
+
 
 
 #### Like by Tags and interact with user
