@@ -16,6 +16,46 @@ sample.get_role_titles() # [Software Engineer, Project Manager]
 ```
 get_role_titles(self) -> list: This method gets the role titles that the resume contains. It will load a JSON file of job titles and will match the job titles in the input text. It will return a list of matched job titles.
 
+```Python
+sample = ResumeParser('resume.pdf')
+sample.get_role_history()
+# Output
+
+# [
+#   {
+#     "title": "full stack developer",
+#     "description": [
+#       "feb 2022 - present • provided crucial support to a junior developer struggling with a complex project, offering guidance and troubleshooting assistance to help them overcome technical obstacles and achieve their objectives",
+#       " • directed the successful development and launch of an exciting project, overseeing the entire development lifecycle from initial design to user feedback analysis",
+#       " • led a team-wide effort to improve development processes, identifying areas for improvement and implementing new tools and methodologies to streamline workflows and improve project outcomes",
+#       " • designed and developed a data dashboard panel in django that displayed key information to users, resulting in a 20% increase in user engagement",
+#       " • developed a highly efficient backend using the django python framework, leveraging crud operations and advanced techniques to optimize performance and streamline development processes",
+#       " • built a user settings page and email authentication system that improved user experience and boosted sign-ups by 25%",
+#       " • refactored code with an emphasis on reusability, object orientation and reducing load on the database server, leading to a 15% improvement in website speed and performance",
+#       " • successfully collaborated with a team of developers and designers to build and deploy multiple web applications on the django framework, resulting in a 40% increase in user acquisition and retention",
+#       " • demonstrated expertise in django frameworks, using rest api, postgressql databases, as well as html, css, and javascript to develop visually appealing and user-friendly web pages",
+#       " weprepfba remote zoho -"
+#     ],
+#     "skills": [
+#       "support",
+#       "server",
+#       "html",
+#       "javascript",
+#       "django",
+#       "design",
+#       "database",
+#       "python",
+#       "databases",
+#       "css",
+#       "authentication",
+#       "api",
+#       "framework"
+#     ],
+#     "start_date": "None",
+#     "end_date": "None",
+#     "Worked Period": "None"
+#   },
+```
 get_role_history(self, skills = False) -> list: This method will get the job history and the job descriptions in the resume. It will use the get_role_titles() method to find the job titles and then extract the job descriptions in between those job titles. It will return a list of dictionaries containing the title, description, skills, start_date, end_date, and worked_period.
 
 get_date(self, text="") -> list: This method will get the date of a string and return the lowest and highest as a datetime object.
