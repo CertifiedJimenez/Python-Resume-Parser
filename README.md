@@ -1,15 +1,24 @@
-Class Documentation: ResumeParser
+# Python-Resume-Parser
+This is a python package that reads the resume of a job candidate 
+
+# Class Documentation: ResumeParser
 
 The ResumeParser class is a Python class that can parse a resume and extract information such as job titles, job history, and skills. The class requires either a filename or text input to initiate, and it will raise a ValueError if both inputs are missing.
 
-Class methods:
 
+## Class methods: 
 __init__(self, filename=None, text='', initialiseModel = True) -> None: Initializes the class object with the input filename or text. It will raise an error if both inputs are missing.
+
 get_role_titles(self) -> list: This method gets the role titles that the resume contains. It will load a JSON file of job titles and will match the job titles in the input text. It will return a list of matched job titles.
+
 get_role_history(self, skills = False) -> list: This method will get the job history and the job descriptions in the resume. It will use the get_role_titles() method to find the job titles and then extract the job descriptions in between those job titles. It will return a list of dictionaries containing the title, description, skills, start_date, end_date, and worked_period.
+
 get_date(self, text="") -> list: This method will get the date of a string and return the lowest and highest as a datetime object.
+
 get_extract_skills(self, text = None) -> list: This method will get the skills within the extracted resume. It will load a JSON file of skills and will match the skills in the input text. It will return a list of matched skills.
+
 _get_between_text(self, text, list) -> list: This method gets the text in between the resume description. It will use the input list to find the starting and ending words of the job descriptions, then it will extract the text between those words.
+
 Note:
 
 The get_date() method has been commented out and not implemented.
@@ -22,8 +31,7 @@ The _get_between_text() method should be updated to not take in a list as an arg
 
 
 
-# Python-Resume-Parser
-This is a python package that reads the resume of a job candidate 
+
 
 
 ---
