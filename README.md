@@ -1,5 +1,16 @@
-# Python-Resume-Parser
-This is a python package that reads the resume of a job candidate 
+<p align="center">
+  <img src="https://i.imgur.com/sJzfZsL.jpg" width="154">
+  <h1 align="center">Python Resume Parser</h1>
+  
+  <p align="center"> This project is designed to assist in the <b>analysis</b> of resumes by automatically extracting relevant information, including job titles, responsibilities, dates of employment, and skills listed by the candidate.
+<p>
+
+
+  <p align="center">
+    <a href="https://github.com/timgrossmann/InstaPy/blob/master/LICENSE">
+      <img src="https://img.shields.io/badge/license-GPLv3-blue.svg" />
+  </p>
+</p>
 
 ## Class Documentation: ResumeParser
 
