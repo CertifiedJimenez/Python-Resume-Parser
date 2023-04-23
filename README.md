@@ -7,7 +7,7 @@ The ResumeParser class is a Python class that can parse a resume and extract inf
 
 
 ## Class methods: 
-__init__(self, filename=None, text='', initialiseModel = True) -> None: Initializes the class object with the input filename or text. It will raise an error if both inputs are missing.
+`__init__(self, filename=None, text='', initialiseModel = True) -> None`: Initializes the class object with the input filename or text. It will raise an error if both inputs are missing.
 
 
 ```Python
