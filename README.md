@@ -9,6 +9,7 @@ The ResumeParser class is a Python class that can parse a resume and extract inf
 ## Class methods: 
 `__init__(self, filename=None, text='', initialiseModel = True) -> None`: Initializes the class object with the input filename or text. It will raise an error if both inputs are missing.
 
+### get_role_titles:
 
 `get_role_titles(self) -> list`: This method gets the role titles that the resume contains. It will load a JSON file of job titles and will match the job titles in the input text. It will return a list of matched job titles.
 
@@ -16,9 +17,9 @@ The ResumeParser class is a Python class that can parse a resume and extract inf
 sample = ResumeParser('resume.pdf')
 sample.get_role_titles() # [Software Engineer, Project Manager]
 ```
+### get_role_history:
 
 `get_role_history(self, skills = False) -> list`: This method will get the job history and the job descriptions in the resume. It will use the get_role_titles() method to find the job titles and then extract the job descriptions in between those job titles. It will return a list of dictionaries containing the `title`, `description`, `skills`, `start_date`, `end_date`, and `worked_period`.
-
 
 ```Python
 sample = ResumeParser('resume.pdf')
@@ -60,18 +61,21 @@ sample.get_role_history()
 #   },
 #]
 ```
-
+### get_date:
 
 `get_date(self, text="")` -> list: This method will get the date of a string and return the lowest and highest and the priod between as a datetime object .
 ```python
 sample.get_date() # [May 2021, May 2022, 365]
 ```
 
+### get_extract_skills:
 
 `get_extract_skills(self, text = None) -> list`: This method will get the skills within the extracted resume. It will load a JSON file of skills and will match the skills in the input text. It will return a list of matched skills.
 ```python
 sample.get_extract_skills() # ["Django", "Java", "React"] 
 ```
+
+### _get_between_text:
 
 `_get_between_text(self, text, list) -> list`: This private method gets the text in between the resume description. It will use the input list to find the starting and ending words of the job descriptions, then it will extract the text between those words.
 
