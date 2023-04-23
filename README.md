@@ -20,7 +20,6 @@ get_role_titles(self) -> list: This method gets the role titles that the resume 
 sample = ResumeParser('resume.pdf')
 sample.get_role_history()
 # Output
-
 # [
 #   {
 #     "title": "full stack developer",
