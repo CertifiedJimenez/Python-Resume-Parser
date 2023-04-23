@@ -80,7 +80,7 @@ sample.get_extract_skills() # ["Django", "Java", "React"]
 `_get_between_text(self, text, list) -> list`: This private method gets the text in between the resume description. It will use the input list to find the starting and ending words of the job descriptions, then it will extract the text between those words.
 
 ```python
-sample._get_between_text() # ["Django", "Java", "React"] 
+sample._get_between_text() 
 # Output
 # "feb 2022 - present • provided crucial support to a junior developer struggling with a complex project, offering guidance and troubleshooting assistance to help them overcome technical obstacles and achieve their objectives
 # • directed the successful development and launch of an exciting project, overseeing the entire development lifecycle from initial design to user feedback analysis,
