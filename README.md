@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.imgur.com/hm20RaC.png" width="154">
+  <img src="https://i.imgur.com/hm20RaC.png" width="300">
   <h1 align="center">Python Resume Parser</h1>
   
   <p align="center"> This project is designed to assist in the <b>analysis</b> of resumes by automatically extracting relevant information, including job titles, responsibilities, dates of employment, and skills listed by the candidate.
