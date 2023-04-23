@@ -6,6 +6,13 @@ This is a python package that reads the resume of a job candidate
 title: Actions
 ---
 
+
+### Class Documentation: ResumeParser
+
+The ResumeParser class is a Python class that can parse a resume and extract information such as job titles, job history, and skills. The class requires either a filename or text input to initiate, and it will raise a ValueError if both inputs are missing.
+
+Class methods:
+
 ### Like by Tags
 
 ```python
