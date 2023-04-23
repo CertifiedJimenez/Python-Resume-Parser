@@ -14,7 +14,7 @@ __init__(self, filename=None, text='', initialiseModel = True) -> None: Initiali
 sample = ResumeParser('resume.pdf')
 sample.get_role_titles() # [Software Engineer, Project Manager]
 ```
-get_role_titles(self) -> list: This method gets the role titles that the resume contains. It will load a JSON file of job titles and will match the job titles in the input text. It will return a list of matched job titles.
+`get_role_titles(self) -> list`: This method gets the role titles that the resume contains. It will load a JSON file of job titles and will match the job titles in the input text. It will return a list of matched job titles.
 
 ```Python
 sample = ResumeParser('resume.pdf')
