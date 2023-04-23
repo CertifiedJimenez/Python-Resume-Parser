@@ -90,7 +90,7 @@ sample._get_between_text() # ["Django", "Java", "React"]
 # weprepfba remote zoho -"
 ```
 
-###Note:
+### Note:
 
 `The get_date(`) method has been commented out and not implemented.
 The input skills in the `get_role_history()` method is not used in the method.
