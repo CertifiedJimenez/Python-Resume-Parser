@@ -6,10 +6,7 @@
 <p>
 
 
-  <p align="center">
-    <a href="https://github.com/timgrossmann/InstaPy/blob/master/LICENSE">
-      <img src="https://img.shields.io/badge/license-GPLv3-blue.svg" />
-  </p>
+
 </p>
 
 ## Class Documentation: ResumeParser
